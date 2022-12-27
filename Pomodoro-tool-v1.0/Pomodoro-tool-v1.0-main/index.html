@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<htm>
+    <!-- Proyecto - Pomodoro Tool v1.0 (pomtool)-->
+    <!-- Project in the way of convert myself in Professional Developer.
+     Languajes used: HTML5, CSS, Bootstrap, Javascript.
+     
+     Server used for test: netlify
+     
+     Origin of the Idea: Idea madurated from a video in youtube made by Argentine Data Engineer Tatiana S.
+     Spanish Video named "Metodo para aprender o estudiar cualquier cosa". I started to think about
+     to make an web aplication like a tool for my own route of learning using this metodology and
+     more utilities. She explained gear the POMODORO Metodology. It was new for me. 
+     
+     Description POMODORO Metodology:
+     . Thes metodoly consist in to separate each resource to study in several modules or chapters.
+       For example: If i want to study a book about "Learning Python" of 10 chapters, then i 
+       separate this 10 chapters in 10 modules and i'll distribute it in 8 blocks of 25 minutes 
+       each one with a 5 minutes of rest between each module. Exception: We need to have a rest of
+       10 or 15 minutes each 4 modules passed and not 5 minutes like before. We repite the same
+       process. IN this time of 10 or 15 minutes of rest we need to do something diferent like: 
+       walk, see the TV, or something else different of study. We return back to study after this
+       time of rest.
+       Then i'll study all the book in 10 days, or 1 and half week, with 8 modules per day for each 
+       chapter, with 5 minutes of rest between each module, and with 10 or 15 minutes of rest each
+       4 modules passed.    
+
+    Especifications of my project:
+    1.- Make a list with the detailed information of all the books, Curses or Material for to 
+        study.
+    2.- Make the distribution of total modules to study per each resource detailed in the point 1.
+    3.- Define how many modules per day i'll used for each resource.    
+    4.- Decide how many hours per day and how many days per week i will dedicate to my study's program.
+    5.- Define how many hours i'll destinate to each resource every day or if want to assign the 
+        same time of study to each resource.
+    6.- Define how many modules is possible to use each day and for each resource taking acount the
+        points 3, 4 and 5. 
+    7.- The application show the controls for i begin the study every day. controls are: 
+       - Begin (Show to me an audible and visual notification)
+       - Stop (Show to me an audible and visual notification)
+       - Pause (Show to me an audible and visual notification)
+       - Reset (Show to me an audible and visual notification)
+       - Fix the minutes to each interval of study.
+       - Fix the minutes for to rest between each of the first four modules. 
+       - Fix the minutes for to rest each 4 modules each day.
+       - Show the progress of my study for each resource. (Show to me an audible and visual notification)
+       - Establish levels of priority for each resource asigning numbers from 1 (level 1) to ... 
+     -->
+
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+        <link href='https://fonts.googleapis.com/css?family=PT+Mono' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/style.css">
+
+        <title>Pomodoro Tool v1.0- By Ronny Diaz Lopez</title>
+    </head>
+
+    <body>
+        <div id="app-container">
+            <h1>POMODORO TOOL v1.0</h1>
+            <!-- <div> -->
+
+            <canvas id="pomodoro-display-canvas" height="400px" width="400px"></canvas>
+
+            <div id="timer-body">
+                <div id="status">Focus</div>
+                <div id="timer-display">
+                    <p>25</p>
+                </div>
+
+                <div id="timer-buttons">
+                    <div class="clock-button" id="button-start"><i class="fa fa-play"></i></div>
+                    <div class="clock-button" id="button-pause"><i class="fa fa-pause"></i></div>
+                    <!-- Change to an icon that better represents reset? -->
+                    <div class="clock-button" id="button-reset"><i class="fa fa-stop"></i></div>
+                </div>
+            </div>
+
+
+            <div id="customization-controls">
+                <!-- work buttons -->
+                <div class="controls-with-label">
+                    <p>Session Length</p>
+                    <div class="controls">
+                        <div class="clock-button" id="less-work"><i class="fa fa-angle-down"></i></div>
+                        <div id="user-work-display">25</div>
+                        <div class="clock-button" id="more-work"><i class="fa fa-angle-up"></i></div>
+                    </div>
+                </div>
+                <!-- rest buttons -->
+                <div class="controls-with-label">
+                    <p>Break Length</p>
+                    <div class="controls">
+                        <div class="clock-button" id="less-rest"><i class="fa fa-angle-down"></i></div>
+                        <p id="user-rest-display">5</p>
+                        <div class="clock-button" id="more-rest"><i class="fa fa-angle-up"></i></div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <!-- end of div container -->
+
+        <footer>
+            <div>Made by <a href="#">Ronny Diaz Lopez</a></div>
+        </footer>
+
+        <script src="js/main.js"></script>
+    </body>
+
+    </html>
